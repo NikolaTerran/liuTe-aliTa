@@ -22,7 +22,7 @@ int main(){
 
 /* demo strcat */
 
-/* demo strcmp */
+/* demo strcmp */ 
   printf("Compare %s and %s\n",str1,str2);
   printf("%d\n", mystrcmp(str1,str2));
   printf("Compare %s and %s\n",str1,str4);
@@ -30,6 +30,11 @@ int main(){
   printf("Compare %s and %s\n",str5,str1);
   printf("%d\n", mystrcmp(str1,str5));
 /* demo strchr */
+  printf("The address of \'%c\' in \"%s\"",'y',str1);
+  printf("%p\n",mystrchr(str1,'y'));
+  printf("Deref that address the we get\n");
+  printf("%c\n",*mystrchr(str1,'y'));
+
 
 /*Extra************************************************************/
 
