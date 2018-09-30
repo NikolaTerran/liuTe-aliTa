@@ -1,5 +1,3 @@
-#include "mystringlib.h"
-
 char *mystrchr(char* str, int c){
 	int i;
 	while(*str){

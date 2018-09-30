@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "mystringlib.h"
+#include "mystrlib.h"
 /* add function headers below */
 
 int main(){
@@ -8,32 +8,41 @@ int main(){
   char str1[] = "hello";
   char str2[] = "hey";
   char str3[] = "hello";
-  char str4[] = "abcdefg";
-  char str5[] = "gfedc";
-/* demo strlen */
+  char str4[50] = "One does not simply ";
+  char str5[50] = "code in c";
+
+  printf("demo mystrlen****************************************\n");
   printf("length of str1: %d\n", mystrlen(str1));
   printf("length of str2: %d\n", mystrlen(str2));
-/* demo strcpy */
+  printf("end demo*********************************************\n\n");
+
+  printf("demo mystrcpy****************************************\n");
   printf("Before copy\n");
   printf("str1: %s, str2: %s\n", str1, str2);
   mystrcpy(str1, str2);
   printf("After copy\n");
   printf("str1: %s, str2: %s\n", str1, str2);
+  printf("end demo*********************************************\n\n");
 
-/* demo strcat */
+  printf("demo mystrcat****************************************\n");
+  printf("str4: %s, str5: %s\n", str4, str5);
+  printf("Append str4 and str5, put the result in str4\n");
+  printf("%s\n",mystrcat(str4,str5));
+  printf("end demo*********************************************\n\n");
 
-/* demo strcmp */ 
+  printf("demo mystrcmp******************************************\n"); 
   printf("Compare %s and %s\n",str1,str2);
   printf("%d\n", mystrcmp(str1,str2));
-  printf("Compare %s and %s\n",str1,str4);
-  printf("%d\n", mystrcmp(str1,str4));
-  printf("Compare %s and %s\n",str5,str1);
-  printf("%d\n", mystrcmp(str1,str5));
-/* demo strchr */
-  printf("The address of \'%c\' in \"%s\"",'y',str1);
+  printf("Compare %s and %s\n",str1,str3);
+  printf("%d\n", mystrcmp(str1,str3));
+  printf("end demo*********************************************\n\n");
+
+  printf("demo mystrchr****************************************\n");
+  printf("The address of \'%c\' in \"%s\"\n",'y',str2);
   printf("%p\n",mystrchr(str1,'y'));
   printf("Deref that address the we get\n");
   printf("%c\n",*mystrchr(str1,'y'));
+  printf("end demo*********************************************\n\n");
 
 
 /*Extra************************************************************/
