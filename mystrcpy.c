@@ -1,4 +1,3 @@
-
 char * mystrcpy( char *dest, char *source){
   int i;
   for(i=0; *source; i++){
